@@ -22,6 +22,11 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "GMO 결제",
+      items: ["gmo-payment/desc/create-gmo-document"],
+    },
+    {
+      type: "category",
       label: "기본 튜토리얼",
       items: [
         "tutorial-basics/create-a-document", // 문서 ID

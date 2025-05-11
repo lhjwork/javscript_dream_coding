@@ -12,7 +12,7 @@ export default function Card({ title, image, subTitle, onClick }: CardProps) {
   return (
     <div className={styles.card} onClick={onClick}>
       <h2>{title}</h2>
-      {image && <img src={image} alt={title} className={styles.cardImage} />}
+      {image && <img src={image} alt={title} className={styles.cardImage} width={252} height={325} />}
       {subTitle && <p className={styles.cardSubTitle}>{subTitle}</p>}
     </div>
   );

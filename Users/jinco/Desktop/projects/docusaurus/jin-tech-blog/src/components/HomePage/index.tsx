@@ -4,6 +4,27 @@ import styles from "./homePage.module.css";
 import Card from "../card/Card";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 
+const FeatureList = [
+  {
+    title: "경력",
+    Svg: require("@site/static/img/my_career_img.png").default,
+    description: "다양한 회사에서의 개발 경험",
+    tab: "career",
+  },
+  {
+    title: "개발자로서의 강점",
+    Svg: require("@site/static/img/my_strengths.png").default,
+    description: "효율성과 소통 능력",
+    tab: "strengths",
+  },
+  {
+    title: "성장",
+    Svg: require("@site/static/img/my_grow_up.png").default,
+    description: "개인적인 성장내용",
+    tab: "growth",
+  },
+];
+
 export default function HomePage() {
   const [typedText, setTypedText] = useState("");
   const fullText = "안녕하세요, 의미 있는 코드를 지향하는 개발자 이한진입니다.";
@@ -52,32 +73,16 @@ export default function HomePage() {
           저는 <strong>프런트엔드 개발자</strong>로서 사용자 경험을 개선하고, 효율적인 웹 애플리케이션을 만드는 데
           열정을 가지고 있습니다.
         </p>
-
         <div className={styles.cardContainer}>
-          <Card
-            title="경력"
-            image="/images/career.png"
-            subTitle="다양한 회사에서의 개발 경험"
-            onClick={() => openModal("career")}
-          />
-          <Card
-            title="자격증"
-            image="/images/certificates.png"
-            subTitle="다양한 자격증 보유"
-            onClick={() => openModal("certificates")}
-          />
-          <Card
-            title="개발자로서의 강점"
-            image="/images/strengths.png"
-            subTitle="효율성과 소통 능력"
-            onClick={() => openModal("strengths")}
-          />
-          <Card
-            title="특별한 경험"
-            image="/images/experience.png"
-            subTitle="Web3 기반 프로젝트 경험"
-            onClick={() => openModal("experience")}
-          />
+          {FeatureList.map((feature, index) => (
+            <Card
+              key={index}
+              title={feature.title}
+              image={feature.Svg}
+              subTitle={feature.description}
+              onClick={() => openModal(feature.tab)}
+            />
+          ))}
         </div>
 
         {modalContent && (

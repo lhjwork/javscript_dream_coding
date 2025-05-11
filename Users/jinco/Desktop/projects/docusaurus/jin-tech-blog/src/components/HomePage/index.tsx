@@ -3,11 +3,12 @@ import clsx from "clsx";
 import styles from "./homePage.module.css";
 import Card from "../card/Card";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
+import mMyImage from "@site/static/img/my_career_img.png";
 
 const FeatureList = [
   {
     title: "경력",
-    Svg: require("@site/static/img/my_career_img.png").default,
+    Svg: require("@site/static/img/my_experience.png").default,
     description: "다양한 회사에서의 개발 경험",
     tab: "career",
   },
@@ -73,6 +74,7 @@ export default function HomePage() {
           저는 <strong>프런트엔드 개발자</strong>로서 사용자 경험을 개선하고, 효율적인 웹 애플리케이션을 만드는 데
           열정을 가지고 있습니다.
         </p>
+        <img src={mMyImage} alt="" />
         <div className={styles.cardContainer}>
           {FeatureList.map((feature, index) => (
             <Card
@@ -133,7 +135,11 @@ export default function HomePage() {
             </li>
             <li>
               <FaLinkedin />
-              <a href="https://linkedin.com/in/hanjinlee" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/%ED%95%9C%EC%A7%84-%EC%9D%B4-285347341/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 LinkedIn: hanjinlee
               </a>
             </li>

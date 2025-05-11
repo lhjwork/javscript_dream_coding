@@ -76,12 +76,18 @@ const config: Config = {
         src: "img/jin_icon.webp",
       },
       items: [
-        { to: "/blog", label: "Blog", position: "left" },
+        { to: "/history", label: "History", position: "right" },
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
-          position: "right",
+          position: "left",
           label: "Tutorial",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "food",
+          position: "left",
+          label: "Food",
         },
         {
           href: "https://github.com/lhjwork",
@@ -145,11 +151,11 @@ const config: Config = {
     [
       "@docusaurus/plugin-content-blog",
       {
-        id: "jin-food-blog", // 고유한 ID
-        routeBasePath: "foodBlog", // 두 번째 블로그의 URL 경로
-        path: "./food_blog", // 두 번째 블로그의 파일 경로
-        blogTitle: "A food blog",
-        blogDescription: "A blog that introduces the taste of my taste",
+        id: "history-blog", // 고유한 ID
+        routeBasePath: "history", // 블로그의 URL 경로
+        path: "./history", // 블로그 파일의 실제 경로
+        blogTitle: "History Blog",
+        blogDescription: "A blog about history",
         showReadingTime: true,
       },
     ],

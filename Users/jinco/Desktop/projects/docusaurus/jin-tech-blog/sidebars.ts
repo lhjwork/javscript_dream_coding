@@ -40,6 +40,23 @@ const sidebars: SidebarsConfig = {
       items: ["tutorial-extras/manage-docs-versions", "tutorial-extras/translate-your-site"],
     },
   ],
+
+  // 새로운 food 사이드바
+  food: [
+    {
+      type: "doc",
+      id: "food-intro", // 문서 ID (docs/food-intro.md)
+      label: "Food 소개", // 사이드바에 표시될 이름
+    },
+    {
+      type: "category",
+      label: "음식 카테고리",
+      items: [
+        "food/recipes", // 문서 ID (docs/food/recipes.md)
+        "food/reviews", // 문서 ID (docs/food/reviews.md)
+      ],
+    },
+  ],
 };
 
 export default sidebars;

@@ -1,0 +1,10 @@
+hanjin:
+  name: HanjinLee
+  title: Frontend Engineer
+  url: https://github.com/lhjwork
+  image_url: ../img/jin_icon.webp
+  page: true
+  socials:
+    github: lhjwork
+    linkedin: hanjinlee
+    instagram: hanjinjr

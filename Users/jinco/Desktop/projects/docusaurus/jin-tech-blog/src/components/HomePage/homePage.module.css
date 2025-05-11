@@ -1,0 +1,191 @@
+.introSection {
+  background-color: var(--ifm-background-color); /* 배경색을 CSS 변수로 변경 */
+  color: var(--ifm-font-color-base); /* 텍스트 색상도 CSS 변수로 변경 */
+}
+
+.container {
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--ifm-heading-color); /* 제목 색상도 CSS 변수로 변경 */
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-font-color-base); /* 부제목 색상도 CSS 변수로 변경 */
+}
+
+.skills,
+.projects,
+.contact {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.skills ul,
+.projects ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.skills li,
+.projects li {
+  margin-bottom: 0.5rem;
+}
+
+.contact {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-heading-color);
+}
+
+.contactList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contactList li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.contactList a,
+.contactList span {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  margin-left: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.contactList a:hover,
+.contactList span:hover {
+  color: var(--ifm-color-primary-dark);
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.contact a {
+  color: var(--ifm-color-primary); /* 링크 색상을 CSS 변수로 변경 */
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.card {
+  background-color: var(--ifm-background-color);
+  border: 1px solid var(--ifm-border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-heading-color);
+}
+
+.card ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  display: none;
+}
+
+.card li {
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--ifm-font-color-base);
+  margin-top: 1rem;
+  display: none;
+}
+
+.card.expanded ul,
+.card.expanded p {
+  display: block;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: var(--ifm-background-color);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--ifm-font-color-base);
+}
+
+.closeButton:hover {
+  color: var(--ifm-color-danger);
+}
